@@ -7,7 +7,7 @@ public class Cars {
 
     private List<Car> cars;
 
-    private Cars() {
+    public Cars() {
         this.cars = new ArrayList<>();
     }
 
