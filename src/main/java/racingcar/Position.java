@@ -2,7 +2,7 @@ package racingcar;
 
 import java.util.Objects;
 
-public class Position {
+public class Position implements Comparable<Position>{
 
     private final String HYPHEN = "-";
 
@@ -45,5 +45,16 @@ public class Position {
     @Override
     public int hashCode() {
         return Objects.hash(position);
+    }
+
+    @Override
+    public int compareTo(Position target) {
+        if(this.position > target.position){
+            return 1;
+        }
+        if(this.position == target.position){
+            return 0;
+        }
+        return -1;
     }
 }
