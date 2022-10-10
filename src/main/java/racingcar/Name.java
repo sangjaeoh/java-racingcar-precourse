@@ -22,13 +22,13 @@ public class Name {
 
     private void validateNameLength(String name) {
         if (name.length() > 5) {
-            throw new IllegalArgumentException(Message.ERROR.getMessage() + " 자동차 이름은 5글자 이하여야 합니다.");
+            throw new IllegalArgumentException(Message.ERROR.message("자동차 이름은 5글자 이하여야 합니다."));
         }
     }
 
     private void validateNameEmpty(String name) {
         if (name == null || name.trim().isEmpty()) {
-            throw new IllegalArgumentException(Message.ERROR.getMessage() + " 자동차 이름은 공백일 수 없습니다.");
+            throw new IllegalArgumentException(Message.ERROR.message("자동차 이름은 공백일 수 없습니다."));
         }
     }
 

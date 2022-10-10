@@ -23,7 +23,7 @@ public class Cars {
     private void validateDuplicate(List<Car> cars) {
         Set<Car> duplicateCarSet = new HashSet<>(cars);
         if (duplicateCarSet.size() != cars.size()) {
-            throw new IllegalArgumentException(Message.ERROR.getMessage() + " 자동차 이름이 중복되었습니다.");
+            throw new IllegalArgumentException(Message.ERROR.message("자동차 이름이 중복되었습니다."));
         }
     }
 

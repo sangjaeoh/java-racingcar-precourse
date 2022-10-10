@@ -9,7 +9,7 @@ public enum Message {
         this.message = message;
     }
 
-    public String getMessage() {
-        return message;
+    public String message(String message) {
+        return this.message + " " + message;
     }
 }
