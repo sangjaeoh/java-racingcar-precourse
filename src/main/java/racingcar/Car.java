@@ -4,6 +4,8 @@ import java.util.Objects;
 
 public class Car implements Comparable<Car> {
 
+    private final int MOVE_POINT = 4;
+
     private Name name;
     private Position position;
 
@@ -27,7 +29,7 @@ public class Car implements Comparable<Car> {
     }
 
     private boolean isMove(int number) {
-        return number >= 4;
+        return number >= MOVE_POINT;
     }
 
 
