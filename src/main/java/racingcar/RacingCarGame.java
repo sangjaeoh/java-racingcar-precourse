@@ -1,5 +1,8 @@
 package racingcar;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class RacingCarGame {
 
     private final String NAMES_SPLIT_REGEX = ",";
@@ -35,11 +38,11 @@ public class RacingCarGame {
     }
 
     private Cars carsOf(String names) {
-        Cars cars = new Cars();
+        List<Car> cars = new ArrayList<>();
         for (String name : names.split(NAMES_SPLIT_REGEX, -1)) {
             cars.add(new Car(name));
         }
-        return cars;
+        return new Cars(cars);
     }
 
     public Count inputCount() {

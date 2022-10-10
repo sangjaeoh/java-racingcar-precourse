@@ -7,17 +7,9 @@ public class Cars {
 
     private List<Car> cars;
 
-    public Cars() {
-        this.cars = new ArrayList<>();
-    }
-
     public Cars(List<Car> cars) {
         validateDuplicate(cars);
         this.cars = cars;
-    }
-
-    public void add(Car car) {
-        this.cars.add(car);
     }
 
     private void validateDuplicate(List<Car> cars) {
@@ -36,13 +28,13 @@ public class Cars {
     public Cars findWinners() {
         cars.sort(Comparator.reverseOrder());
         Car winner = cars.get(0);
-        Cars winners = new Cars();
+        List<Car> winners = new ArrayList<>();
         for (Car car : cars) {
             if (winner.getPosition().equals(car.getPosition())) {
                 winners.add(car);
             }
         }
-        return winners;
+        return new Cars(winners);
     }
 
     public String names() {
